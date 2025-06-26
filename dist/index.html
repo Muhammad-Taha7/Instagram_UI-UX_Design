@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram | Design</title>
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<!-- ✅ Mobile Top Nav -->
+<div class="fixed top-0 w-full h-[4rem] bg-white z-30 flex items-center justify-between px-4 border-b border-gray-300 md:hidden">
+  <img src="/Images/Instagram_icon.png.webp" alt="Logo" class="h-8">
+  <input type="text" placeholder="Search" class="text-sm px-3 py-1 w-[60%] border border-gray-300 rounded-full focus:outline-none"/>
+  <button onclick="toggleSidebar()">
+    <i class="fas fa-bars text-xl text-gray-700"></i>
+  </button>
+</div>
+
+<!-- ✅ Mobile Sidebar -->
+<div id="mobileSidebar" class="fixed top-0 left-0 h-full w-[70%] max-w-xs bg-white z-50 transform -translate-x-full transition-transform duration-300 ease-in-out shadow-lg md:hidden">
+  <div class="p-4 space-y-4">
+    <span class="flex gap-3 items-center"> 
+      <img src="/Images/Instagram_icon.png.webp" alt="Logo" class="h-8 ml-2">
+      <span class="text-gray-600 font-bold text-[1.4rem]">Instagram</span>
+    </span>
+    <a href="#" class="flex items-center gap-3 mt-[2rem] hover:bg-gray-200 rounded-lg p-3"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#" class="flex items-center gap-3 hover:bg-gray-200 rounded-lg p-3"><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+    <a href="#" class="flex items-center gap-3 hover:bg-gray-200 rounded-lg p-3"><i class="fa-solid fa-compass"></i> Explore</a>
+    <a href="#" class="flex items-center gap-3 hover:bg-gray-200 rounded-lg p-3"><img src="/Images/download.png" class="h-5" alt=""> Reels</a>
+    <a href="#" class="flex items-center gap-3 hover:bg-gray-200 rounded-lg p-3"><img src="/Images/facebook-messenger-icon-md.png" class="h-6" alt=""> Messages</a>
+    <a href="#" class="flex items-center gap-3 hover:bg-gray-200 rounded-lg p-3"><i class="fa-regular fa-heart"></i> Notifications</a>
+    <a href="#" class="flex items-center gap-3 hover:bg-gray-200 rounded-lg p-3"><i class="fa-solid fa-square-plus"></i> Create</a>
+    <a href="#" class="flex items-center gap-3 hover:bg-gray-200 rounded-lg p-3"><img src="/Images/pexels-photo-14653174.jpeg" class="h-6 w-6 rounded-full object-cover" alt=""> Profile</a>
+    <a href="#" class="flex items-center gap-3 hover:bg-gray-200 rounded-lg p-3"><i class="fa-solid fa-bars"></i> More</a>
+  </div>
+</div>
+
+<!-- ✅ Mobile Bottom Nav -->
+<div class="fixed bottom-0 w-full h-[5rem] border-t-2 border-gray-200 z-30 flex bg-white justify-around items-center md:hidden">
+  <i class="fa-solid fa-house text-[1.4rem]"></i>
+  <i class="fa-solid fa-compass text-[1.5rem]"></i>
+  <img src="/Images/download.png" class="h-8" alt="">
+  <img src="/Images/new_create_ui_ux_plus_add_icon_224699 (1).webp" class="h-12" alt="">
+  <img src="/Images/messenger-outline-icon-free-vector.jpg" class="h-6" alt="">
+  <div class="circle h-8 w-8 bg-center object-cover rounded-full">
+    <img src="/Images/pexels-photo-14653174.jpeg" class="rounded-full" alt="">
+  </div>
+</div>
+
+<!-- ✅ Left Sidebar for PC/Tablet -->
+<div class="hidden md:block fixed top-0 left-0 border-r-2 border-gray-200 h-full z-10 md:w-[15%] lg:w-[15%]">
+  <div class="hidden lg:block p-10">
+    <img src="/Images/instagram-1.svg" alt="Logo" class="h-16">
+  </div>
+  <div class="lg:hidden p-7">
+    <img src="/Images/Instagram_icon.png.webp" alt="Logo" class="h-14">
+  </div>
+  <div class="links space-y-1 p-[2rem] flex flex-col gap-[1.3rem]">
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer">
+      <i class="fa-solid fa-house text-[1.5rem]"></i>
+      <h2 class="text-[1.3rem] font-medium hidden lg:block ml-3">Home</h2>
+    </div>
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer">
+      <i class="fa-solid fa-magnifying-glass text-[1.5rem]"></i>
+      <h2 class="text-[1.3rem] hidden lg:block ml-3">Search</h2>
+    </div>
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer">
+      <i class="fa-solid fa-compass text-[1.6rem]"></i>
+      <h2 class="text-[1.3rem] hidden lg:block ml-3">Explore</h2>
+    </div>
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer">
+      <img src="/Images/download.png" class="h-8" alt="Reels">
+      <h2 class="text-[1.3rem] hidden lg:block ml-3">Reels</h2>
+    </div>
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer">
+      <img src="/Images/facebook-messenger-icon-md.png" class="h-8" alt="Messages">
+      <h2 class="text-[1.3rem] hidden lg:block ml-3">Messages</h2>
+    </div>
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer">
+      <i class="fa-regular fa-heart text-[1.5rem]"></i>
+      <h2 class="text-[1.2rem] hidden lg:block ml-3">Notifications</h2>
+    </div>
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer">
+      <i class="fa-solid fa-square-plus text-[1.5rem]"></i>
+      <h2 class="text-[1.3rem] hidden lg:block ml-3">Create</h2>
+    </div>
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer">
+      <div class="h-6 w-6 rounded-full overflow-hidden">
+        <img src="/Images/pexels-photo-14653174.jpeg" class="h-full w-full object-cover" alt="Profile">
+      </div>
+      <h2 class="text-[1.3rem] hidden lg:block ml-3">Profile</h2>
+    </div>
+    <div class="flex items-center gap-2 hover:bg-gray-200 rounded-lg px-3 py-3 cursor-pointer mt-10">
+      <i class="fa-solid fa-bars text-[1.5rem]"></i>
+      <h2 class="text-[1.3rem] hidden lg:block ml-3">More</h2>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Right Sidebar for PC -->
+<div class="hidden lg:block fixed  top-0 right-0 w-[20%] h-[43rem] z-10">
+  <div class="id">
+    <div class="profile p-5 mt-[3rem] flex items-center gap-3">
+      <img src="/Images/pexels-photo-14653174.jpeg" alt="" class="h-12 w-12 rounded-full">
+      <div class="name flex flex-col">
+        <h2 class="font-medium text-[1.1rem]">m_taha_dev</h2>
+        <h4 class="text-gray-400">Mirza Taha</h4>
+      </div>
+      <a href="#" class="text-blue-400 font-medium ml-32">Switch</a>
+    </div>
+    <div class="suggest flex gap-40">
+      <h2 class="text-gray-400 font-medium pl-5">Suggested for you</h2>
+      <a href="#">See All</a>
+    </div>
+    <!-- Suggestion List -->
+    <!-- Repeat items as needed -->
+    <div class="profile p-5 flex items-center gap-3">
+      <img src="/Images/photo-1628563694622-5a76957fd09c.jpeg" class="h-12 w-12 rounded-full object-cover object-center">
+      <div class="name flex flex-col">
+        <h2 class="font-medium text-[1rem]">its_.alirajpoot</h2>
+        <h4 class="text-gray-400">Followed by <br>Quran_aur_ahadis</h4>
+      </div>
+      <a href="#" class="text-blue-400 font-medium ml-[5.9rem]">Follow</a>
+    </div>
+    <div class="profile p-5 flex items-center gap-3">
+      <img src="/Images/download (1).jpeg" class="h-12 w-12 rounded-full">
+      <div class="name flex flex-col">
+        <h2 class="font-medium text-[1.1rem]">m_haris_cheema</h2>
+        <h4 class="text-gray-400">Followed by Taha</h4>
+      </div>
+      <a href="#" class="text-blue-400 font-medium ml-[5.6rem]">Follow</a>
+    </div>
+    <div class="profile p-5 flex items-center gap-3">
+      <img src="/Images/download (2).jpeg" class="h-12 w-12 rounded-full">
+      <div class="name flex flex-col">
+        <h2 class="font-medium text-[1.1rem]">m_taha_dev</h2>
+        <h4 class="text-gray-400">Mirza Taha</h4>
+      </div>
+      <a href="#" class="text-blue-400 font-medium ml-32">Follow</a>
+    </div>
+    <div class="profile p-5 flex items-center gap-3">
+      <img src="/Images/download (3).jpeg" class="h-12 w-12 rounded-full">
+      <div class="name flex flex-col">
+        <h2 class="font-medium text-[1.1rem]">m_taha_dev</h2>
+        <h4 class="text-gray-400">Mirza Taha</h4>
+      </div>
+      <a href="#" class="text-blue-400 font-medium ml-32">Follow</a>
+    </div>
+    <div class="div p-6">
+      <h2 class="text-gray-500 text-[2rem]">......</h2>
+    </div>
+  </div>
+</div>
+<!-- ✅ Main Section (Centered) -->
+
+<!-- ✅ Main Section (Centered) -->
+<div class="h-[200vh] overflow-y-scroll scrollbar-hide pt-[4rem] pb-[5rem] md:pt-0 md:pb-4
+            md:ml-[15%] lg:ml-[15%] md:mr-0 lg:mr-[20%] flex cursor-pointer justify-center">
+  <div class="container h-full w-full max-w-[60rem] px-4">
+
+    <!-- ✅ Story Slider -->
+    <div class="py-5 overflow-x-auto scrollbar-hide border-b-2 border-gray-300">
+      <div class="flex gap-3 w-max">
+
+        <!-- 🔁 Story with Gradient Border -->
+        <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person1.avif" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+      <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person2.jpg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person3.jpg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person4.jpg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+       <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person5.jpeg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+       <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person6.jpg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+       <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person7.avif" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person8.jpeg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+        <!-- More Story Circles -->
+        <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person9.jpeg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person10.jpeg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+        <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person 11.avif" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+        <div class="flex-shrink-0 bg-gradient-to-tr h-[3.5rem] w-[3.5rem] md:h-[5.5rem] md:w-[5.5rem] from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+          <div class="bg-white p-[2px] rounded-full">
+            <img src="/Images/person12.jpeg" alt="Person 1" class="h-[3rem] w-[3rem] md:h-[5rem] md:w-[5rem] rounded-full object-cover" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+<!-- 📸 Instagram Post with Image Slider -->
+<div class="max-w-[40rem] w-full bg-white border border-gray-300 rounded-md mx-auto my-10 shadow-sm">
+
+  <!-- 🧑 Profile Header -->
+  <div class="flex items-center justify-between px-4 py-3">
+    <div class="flex items-center gap-3">
+      <div class="bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[2px] rounded-full">
+        <div class="bg-white p-[1px] rounded-full">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile" class="h-10 w-10 rounded-full object-cover" />
+        </div>
+      </div>
+      <div>
+        <p class="text-sm font-semibold">ayezakhan.ak</p>
+        <p class="text-xs text-gray-500">14m ago</p>
+      </div>
+    </div>
+    <div class="text-xl text-gray-500">⋯</div>
+  </div>
+
+  <!-- 🖼️ Image Slider -->
+  <div class="relative overflow-hidden max-h-[48rem]">
+    <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+      <img src="/Images/img1.jpg" class="w-full object-cover object-center flex-shrink-0" />
+      <img src="/Images/img2.jpg" class="w-full object-cover object-center flex-shrink-0" />
+      <img src="/Images/img3.jpeg" class="w-full object-cover object-center flex-shrink-0" />
+    </div>
+
+    <!-- Arrows -->
+    <button onclick="slidePrev()" class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full z-10">
+      <i class="fas fa-chevron-left"></i>
+    </button>
+    <button onclick="slideNext()" class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-black bg-opacity-40 text-white p-2 rounded-full z-10">
+      <i class="fas fa-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- ❤️ Action Buttons -->
+  <div class="flex justify-between items-center px-4 pt-3 text-xl text-gray-700">
+    <div class="flex space-x-4">
+      <i class="fa-regular fa-heart cursor-pointer hover:scale-110 transition"></i>
+      <i class="fa-regular fa-comment cursor-pointer hover:scale-110 transition"></i>
+      <i class="fa-regular fa-paper-plane cursor-pointer hover:scale-110 transition"></i>
+    </div>
+    <i class="fa-regular fa-bookmark cursor-pointer hover:scale-110 transition"></i>
+  </div>
+
+  <!-- 🧡 Likes -->
+  <div class="px-4 mt-2 text-sm font-semibold text-gray-800">8,524 likes</div>
+
+  <!-- ✏️ Caption -->
+  <div class="px-4 py-1 text-sm text-gray-800">
+    <span class="font-semibold">ayezakhan.ak</span>
+    <span> Exploring nature's calm 🏞️✨</span>
+  </div>
+
+  <!-- 💬 Comment Input -->
+  <div class="px-4 py-3">
+    <input type="text" placeholder="Add a comment..." class="w-full text-sm border-none focus:outline-none bg-transparent placeholder-gray-500" />
+  </div>
+</div>
+
+<!-- ✅ Slider JS -->
+<script>
+  let currentSlide = 0;
+  const slider = document.getElementById("slider");
+  const slides = slider.children;
+  const totalSlides = slides.length;
+
+  function updateSlider() {
+    slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function slideNext() {
+    if (currentSlide < totalSlides - 1) {
+      currentSlide++;
+      updateSlider();
+    }
+  }
+
+  function slidePrev() {
+    if (currentSlide > 0) {
+      currentSlide--;
+      updateSlider();
+    }
+  }
+    function toggleSidebar() {
+    const sidebar = document.getElementById("mobileSidebar");
+    const isHidden = sidebar.classList.contains("-translate-x-full");
+
+    if (isHidden) {
+      sidebar.classList.remove("-translate-x-full");
+      sidebar.classList.add("translate-x-0");
+    } else {
+      sidebar.classList.remove("translate-x-0");
+      sidebar.classList.add("-translate-x-full");
+    }
+  }
+</script>
+
+</body>
+</html>
